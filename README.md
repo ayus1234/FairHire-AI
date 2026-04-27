@@ -12,20 +12,21 @@ Organizations increasingly use automated hiring systems to screen and shortlist 
 ---
 
 ## 🌟 Key Features
-* **Global Dataset Audit**: Instantly calculate Disparate Impact and Statistical Parity across thousands of hiring records.
-* **Explainable AI (XAI)**: Leverage Google **Gemini 2.5 Flash** to generate human-readable "Audit Traces" that explain *why* specific hiring decisions may be biased.
-* **ML Decision Drivers**: Built-in `Scikit-Learn` Random Forest analysis to mathematically prove which demographic or skill features drove the hiring algorithm's choices.
-* **Compliance Ready**: Generate and export branded PDF Fairness Audit Reports for corporate compliance archiving.
+* **Global Dataset Audit**: Instantly calculate mathematically rigorous fairness metrics (Disparate Impact & Statistical Parity) across thousands of dataset records.
+* **Explainable AI (XAI)**: Leverage **Google Gemini 2.5 Flash** to generate interactive, human-readable "Audit Traces" explaining the precise risks behind an individual algorithm's decision.
+* **Decision Driver Analysis**: Built-in `scikit-learn` Random Forest algorithms automatically identify the most influential proxy variables driving selection rates.
+* **Corporate Reporting**: Instant PDF generation and exporting for both Global Trends and Individual AI Traces.
+* **Solution Challenge Optimized**: Designed with Web Accessibility (ARIA tags), comprehensive Test-Driven Development (TDD), and enterprise monitoring logs.
 
 ---
 
 ## 🏗️ Architecture Stack
-Our platform is fully optimized for **Google Cloud Deployment**.
+Our platform is fully built for **Google Cloud Deployment**, establishing an enterprise-ready microservice architecture.
 
-* **Frontend**: React.js / Vite (Tailwind CSS, Recharts) → *Google Cloud Storage*
-* **Backend**: FastAPI (Python) → *Google Cloud Run*
-* **Database**: SQLite (Local MVP) / PostgreSQL → *Google Cloud SQL*
-* **AI Engine**: Google Gemini API (`models/gemini-2.5-flash`)
+* **Frontend**: React.js / Vite (Tailwind CSS, Framer Motion) → *Google Cloud Storage*
+* **Backend API**: FastAPI (Python) → *Google Cloud Run*
+* **Dynamic Database**: Database-Agnostic SQLAlchemy setup. Uses local `SQLite` for rapid testing, instantly scaling to `PostgreSQL` (*Google Cloud SQL*) via environment variables.
+* **Auditing Engine**: Google Gemini API (`models/gemini-2.5-flash`)
 
 ---
 
@@ -48,12 +49,13 @@ pip install -r requirements.txt
 **Environment Variables**: Create a `.env` file in the `/backend` folder.
 ```env
 GEMINI_API_KEY=your_google_gemini_api_key
+# DATABASE_URL=postgresql://user:password@localhost/dbname (Optional: For Production Cloud SQL)
 ```
 **Run the Server**:
 ```bash
 python main.py
 ```
-*(Runs locally on `http://127.0.0.1:8001`)*
+*(Runs locally on `http://127.0.0.1:8001` with real-time audit logging enabled)*
 
 ### 3. Frontend Setup
 ```bash
@@ -65,8 +67,8 @@ npm run dev
 
 ---
 
-## 🧪 Testing
-The architecture follows Test-Driven Development (TDD). To verify the algorithmic fairness math logic:
+## 🧪 Automated Testing
+The architectural logic is validated via automated testing (TDD) to prove statistical accuracy.
 ```bash
 cd backend
 python -m pytest tests/test_bias_logic.py
@@ -75,7 +77,7 @@ python -m pytest tests/test_bias_logic.py
 ---
 
 ## ☁️ Google Cloud Deployment
-For instructions on deploying the React Frontend to **Google Cloud Storage** and the FastAPI Backend to **Google Cloud Run**, please refer to the `GCP_DEPLOYMENT.md` guide.
+For complete step-by-step instructions on deploying the React Frontend to **Google Cloud Storage** and the FastAPI Backend to **Google Cloud Run**, please refer to the `GCP_DEPLOYMENT.md` guide.
 
 ---
 *Built with ❤️ for the Google Solution Challenge by Team Latent Legends.*
