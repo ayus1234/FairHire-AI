@@ -26,11 +26,11 @@ Organizations increasingly use automated hiring systems to screen and shortlist 
 1. **Global Fairness Analytics**
 ![Global Audit Metric Dashboard](screenshots/global_audit.png?v=3)
 
-2. **Dataset Comparison Analysis**
-![Dataset Comparison View](screenshots/comparison_view.png?v=3)
-
-3. **Gemini Explicit AI Audit Trace**
+2. **Gemini Explicit AI Audit Trace**
 ![XAI Individual Report](screenshots/xai_report.png?v=4)
+
+3. **Dataset Comparison Analysis**
+![Dataset Comparison View](screenshots/comparison_view.png?v=3)
 
 ---
 
