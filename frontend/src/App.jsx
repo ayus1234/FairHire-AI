@@ -453,12 +453,12 @@ const App = () => {
               {!result ? (
                 <div style={{ textAlign: 'center', padding: '3rem' }}>
                   <AlertTriangle size={32} color="var(--warning)" style={{ marginBottom: '1rem' }} />
-                  <p>Please upload a dataset in the **Audit** view before running an individual case audit.</p>
+                  <p>Please upload a dataset in the <strong>Audit</strong> view before running an individual case audit.</p>
                 </div>
               ) : (
                 <>
                 <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', fontSize: '0.9rem' }}>
-                  Analyze how specific traits contributed to a decision within the context of **{result.filename}**.
+                  Analyze how specific traits contributed to a decision within the context of <strong>{result.filename}</strong>.
                 </p>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem' }}>
                   <input type="text" placeholder="Candidate Gender" className="icon-btn" style={{ width: '100%', textAlign: 'left' }} onChange={(e) => setCandidateData({...candidateData, gender: e.target.value})} />
