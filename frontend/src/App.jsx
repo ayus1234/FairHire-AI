@@ -296,11 +296,11 @@ const App = () => {
   return (
     <div className="app-container">
       <div className="floating-actions">
-        <button className="icon-btn" onClick={() => setViewMode(viewMode === 'comparison' ? 'audit' : 'comparison')} title="Toggle Comparison Mode">
-          <ArrowRightLeft size={20} color={viewMode === 'comparison' ? 'var(--primary)' : 'white'} />
-        </button>
         <button className="icon-btn" onClick={() => setViewMode(viewMode === 'individual' ? 'audit' : 'individual')} title="Individual Case Audit">
           <FileSearch size={20} color={viewMode === 'individual' ? 'var(--primary)' : 'white'} />
+        </button>
+        <button className="icon-btn" onClick={() => setViewMode(viewMode === 'comparison' ? 'audit' : 'comparison')} title="Toggle Comparison Mode">
+          <ArrowRightLeft size={20} color={viewMode === 'comparison' ? 'var(--primary)' : 'white'} />
         </button>
         <button className="icon-btn" onClick={() => setShowHistory(true)} title="View Audit Archive">
           <History size={20} />
