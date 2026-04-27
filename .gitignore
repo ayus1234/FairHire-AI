@@ -1,0 +1,24 @@
+# Environment variables
+.env
+
+# Python caching
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Databases (Do not commit real databases to GitHub)
+backend/audits.db
+
+# Large presentation files
+*.pptx
+
+# OS generated files
+.DS_Store
+Thumbs.db
