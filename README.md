@@ -24,13 +24,13 @@ Organizations increasingly use automated hiring systems to screen and shortlist 
 *(You can drag and drop your screenshots directly here when editing this file on GitHub!)*
 
 1. **Global Fairness Analytics**
-![Global Audit Metric Dashboard]()
+![Global Audit Metric Dashboard](screenshots/global_audit.png)
 
 2. **Machine Learning Decision Drivers**
-![Scikit-Learn Feature Importance]()
+![Scikit-Learn Feature Importance](screenshots/decision_drivers.png)
 
 3. **Gemini Explicit AI Audit Trace**
-![XAI Individual Report]()
+![XAI Individual Report](screenshots/xai_report.png)
 
 ---
 
