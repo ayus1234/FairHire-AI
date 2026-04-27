@@ -145,6 +145,12 @@ const App = () => {
 
   const handleIndividualAudit = async () => {
     if (!result) return;
+    const requiredFields = ['gender', 'outcome', 'experience', 'location'];
+    const emptyFields = requiredFields.filter(f => !candidateData[f] || candidateData[f].trim() === '');
+    if (emptyFields.length > 0) {
+      setIndividualResult(`⚠️ All fields are mandatory. Please fill in: ${emptyFields.join(', ')}.`);
+      return;
+    }
     setLoading(true);
     setIndividualResult(null);
     try {
