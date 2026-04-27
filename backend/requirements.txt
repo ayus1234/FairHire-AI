@@ -7,3 +7,4 @@ pydantic
 python-dotenv
 sqlalchemy
 scikit-learn
+psycopg2-binary
