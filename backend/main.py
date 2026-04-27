@@ -263,10 +263,10 @@ async def analyze_data(file: UploadFile = File(...)):
     try:
         new_audit = AuditRecord(
             filename=file.filename,
-            overall_bias=overall_bias,
-            privileged_group=privileged,
-            privileged_selection_rate=privileged_sr,
-            metrics=bias_results,
+            overall_bias=float(overall_bias),
+            privileged_group=str(privileged),
+            privileged_selection_rate=float(privileged_sr),
+            metrics=json.loads(json.dumps(bias_results, default=str)),
             ai_explanation=explanation
         )
         db.add(new_audit)
