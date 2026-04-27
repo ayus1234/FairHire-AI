@@ -10,6 +10,12 @@ Organizations increasingly use automated hiring systems to screen and shortlist 
 
 **FairHire AI** is an intelligent auditing platform that evaluates hiring datasets and recruitment decisions for bias. We do not replace hiring tools—we verify whether they are fair, transparent, and legally accountable.
 
+### 🔗 Live Deployment
+| Component | URL |
+|-----------|-----|
+| **Frontend (Dashboard)** | [fairhire-ai-six.vercel.app](https://fairhire-ai-six.vercel.app) |
+| **Backend API (Cloud Run)** | [fairhire-backend.asia-south1.run.app](https://fairhire-backend-15593284604.asia-south1.run.app) |
+
 ---
 
 ## 🌟 Key Features
