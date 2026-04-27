@@ -30,7 +30,7 @@ Organizations increasingly use automated hiring systems to screen and shortlist 
 ![Dataset Comparison View](screenshots/comparison_view.png?v=3)
 
 3. **Gemini Explicit AI Audit Trace**
-![XAI Individual Report](screenshots/xai_report.png?v=3)
+![XAI Individual Report](screenshots/xai_report.png?v=4)
 
 ---
 
