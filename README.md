@@ -21,7 +21,6 @@ Organizations increasingly use automated hiring systems to screen and shortlist 
 ---
 
 ## 📸 MVP Snapshots
-*(You can drag and drop your screenshots directly here when editing this file on GitHub!)*
 
 1. **Global Fairness Analytics**
 ![Global Audit Metric Dashboard](screenshots/global_audit.png?v=3)
