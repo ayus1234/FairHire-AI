@@ -20,6 +20,20 @@ Organizations increasingly use automated hiring systems to screen and shortlist 
 
 ---
 
+## 📸 MVP Snapshots
+*(You can drag and drop your screenshots directly here when editing this file on GitHub!)*
+
+1. **Global Fairness Analytics**
+![Global Audit Metric Dashboard]()
+
+2. **Machine Learning Decision Drivers**
+![Scikit-Learn Feature Importance]()
+
+3. **Gemini Explicit AI Audit Trace**
+![XAI Individual Report]()
+
+---
+
 ## 🏗️ Architecture Stack
 Our platform is fully built for **Google Cloud Deployment**, establishing an enterprise-ready microservice architecture.
 
