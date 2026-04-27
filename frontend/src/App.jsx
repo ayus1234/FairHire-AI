@@ -45,7 +45,7 @@ const Tooltip = ({ title, content }) => (
   </div>
 );
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8001';
+const BASE_URL = 'https://fairhire-backend-15593284604.asia-south1.run.app';
 
 const App = () => {
   const [loading, setLoading] = useState(false);
