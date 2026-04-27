@@ -137,6 +137,7 @@ def read_root():
 
 @app.post("/analyze")
 async def analyze_data(file: UploadFile = File(...)):
+  try:
     print(f"INFO:     [AUDIT] New audit request for file: {file.filename}", flush=True)
     if not file.filename.endswith('.csv'):
         raise HTTPException(status_code=400, detail="Only CSV files are supported.")
@@ -274,6 +275,11 @@ async def analyze_data(file: UploadFile = File(...)):
         db.close()
 
     return result_data
+  except HTTPException:
+    raise
+  except Exception as e:
+    print(f"ERROR:    [AUDIT] Unhandled error in /analyze: {str(e)}", flush=True)
+    return {"error": f"Server processing error: {str(e)}"}
 
 class IndividualAuditRequest(BaseModel):
     candidate_data: dict
