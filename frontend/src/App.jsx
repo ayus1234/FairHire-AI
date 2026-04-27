@@ -18,7 +18,8 @@ import {
   AlertTriangle,
   Layers,
   Activity,
-  RefreshCcw
+  RefreshCcw,
+  Trash2
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -83,6 +84,17 @@ const App = () => {
       setCompHistory(response.data);
     } catch (err) {
       console.error("Failed to fetch comp history");
+    }
+  };
+
+  const clearHistory = async () => {
+    if (!confirm('Are you sure you want to clear all history?')) return;
+    try {
+      await axios.delete(`${BASE_URL}/history/clear`);
+      setHistory([]);
+      setCompHistory([]);
+    } catch (err) {
+      console.error('Failed to clear history');
     }
   };
 
@@ -318,7 +330,12 @@ const App = () => {
           <motion.div initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} className="history-panel">
             <div className="history-header">
               <h3>{historyTab === 'audits' ? 'Audit Archive' : 'Trend Archive'}</h3>
-              <X onClick={() => setShowHistory(false)} cursor="pointer" />
+              <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+                <button onClick={clearHistory} className="icon-btn" title="Clear All History" style={{ padding: '0.3rem' }}>
+                  <Trash2 size={16} color="var(--error)" />
+                </button>
+                <X onClick={() => setShowHistory(false)} cursor="pointer" />
+              </div>
             </div>
             
             <div className="history-tabs">

@@ -325,6 +325,17 @@ def get_history():
     finally:
         db.close()
 
+@app.delete("/history/clear")
+def clear_history():
+    db = SessionLocal()
+    try:
+        db.query(AuditRecord).delete()
+        db.query(ComparisonRecord).delete()
+        db.commit()
+        return {"message": "All history cleared."}
+    finally:
+        db.close()
+
 @app.post("/compare")
 async def compare_datasets(file1: UploadFile = File(...), file2: UploadFile = File(...)):
     print(f"New audit request for file: {file1.filename} and {file2.filename}")
