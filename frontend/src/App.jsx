@@ -100,7 +100,7 @@ const App = () => {
 
   const handleUpload = async (e) => {
     const selectedFile = e.target.files[0];
-    if (!selectedFile) return;
+    if (!selectedFile || loading) return;
     
     const formData = new FormData();
     formData.append('file', selectedFile);
