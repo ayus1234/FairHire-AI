@@ -4,6 +4,7 @@
 [![Google Solution Challenge](https://img.shields.io/badge/Google-Solution_Challenge_2026-blue.svg)](https://developers.google.com/community/gdsc-solution-challenge)
 [![Built with Gemini](https://img.shields.io/badge/Built_with-Gemini_2.5_Flash-green.svg)](https://ai.google.dev/)
 [![GCP Hosted](https://img.shields.io/badge/Hosted_on-Google_Cloud-4285F4.svg)](https://cloud.google.com/)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-fairhire--ai-8B5CF6.svg)](https://fairhire-ai-six.vercel.app)
 
 Organizations increasingly use automated hiring systems to screen and shortlist candidates. However, if these systems are trained on biased historical data, they unintentionally discriminate based on gender, demographic categories, or hidden proxy variables.
 
