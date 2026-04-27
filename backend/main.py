@@ -392,11 +392,11 @@ async def compare_datasets(file1: UploadFile = File(...), file2: UploadFile = Fi
         comp_record = ComparisonRecord(
             filename_a=filename1,
             filename_b=filename2,
-            score_a=result1['overall_bias'],
-            score_b=result2['overall_bias'],
+            score_a=float(result1['overall_bias']),
+            score_b=float(result2['overall_bias']),
             ai_comparison=ai_comparison,
-            raw_data_a=result1,
-            raw_data_b=result2
+            raw_data_a=json.loads(json.dumps(result1, default=str)),
+            raw_data_b=json.loads(json.dumps(result2, default=str))
         )
         db.add(comp_record)
         db.commit()
