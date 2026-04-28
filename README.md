@@ -43,7 +43,7 @@ Organizations increasingly use automated hiring systems to screen and shortlist 
 ## 🏗️ Architecture Stack
 Our platform is fully built for **Google Cloud Deployment**, establishing an enterprise-ready microservice architecture.
 
-* **Frontend**: React.js / Vite (Tailwind CSS, Framer Motion) → *Google Cloud Storage*
+* **Frontend**: React.js / Vite (Tailwind CSS, Framer Motion) → *Google Firebase Hosting*
 * **Backend API**: FastAPI (Python) → *Google Cloud Run*
 * **Dynamic Database**: Database-Agnostic SQLAlchemy setup. Uses local `SQLite` for rapid testing, instantly scaling to `PostgreSQL` (*Google Cloud SQL*) via environment variables.
 * **Auditing Engine**: Google Gemini API (`models/gemini-2.5-flash`)
@@ -97,7 +97,7 @@ python -m pytest tests/test_bias_logic.py
 ---
 
 ## ☁️ Google Cloud Deployment
-For complete step-by-step instructions on deploying the React Frontend to **Google Cloud Storage** and the FastAPI Backend to **Google Cloud Run**, please refer to the `GCP_DEPLOYMENT.md` guide.
+For complete step-by-step instructions on deploying the React Frontend to **Google Firebase Hosting** and the FastAPI Backend to **Google Cloud Run**, please refer to the `GCP_DEPLOYMENT.md` guide.
 
 ---
 *Built with ❤️ for the Google Solution Challenge by Team Latent Legends.*
